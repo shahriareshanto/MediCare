@@ -1,4 +1,4 @@
-// hmp/backend/middleware/authMiddleware.js
+//MediCare/backend/middleware/authMiddleware.js
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.JWT_SECRET;
