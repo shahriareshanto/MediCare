@@ -1,0 +1,128 @@
+/* General navbar styles */
+.custom-navbar {
+  background-color: #ffffff;
+  padding: 0.25rem 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  color: #0bc181;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+/* Navbar items with unique colors */
+.navbar-item {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 4px; /* Optional for rounded look */
+}
+
+.navbar-item:nth-child(1) {
+  color: #02e8b2; /* Valorant color */
+}
+
+.navbar-item:nth-child(2) {
+  color: #ae0606; /* Blood Bank */
+}
+
+.navbar-item:nth-child(3) {
+  color: #0690e6; /* Pharmacy */
+}
+
+.navbar-item:nth-child(4) {
+  color: #ffcf3c; /* Support */
+}
+
+.navbar-item:nth-child(5) {
+  color: #000000; /* About */
+}
+
+/* Hover effects for each item */
+.navbar-item:nth-child(1):hover {
+  background-color: #02e8b2;
+  color: #ffffff;
+}
+
+.navbar-item:nth-child(2):hover {
+  background-color: #ae0606;
+  color: #ffffff;
+}
+
+.navbar-item:nth-child(3):hover {
+  background-color: #0690e6;
+  color: #ffffff;
+}
+
+.navbar-item:nth-child(4):hover {
+  background-color: #ffcf3c;
+  color: #ffffff;
+}
+
+.navbar-item:nth-child(5):hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Underline hover effect */
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-item:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-icon {
+  margin-right: 8px;
+}
+
+.navbar-time {
+  color: #0c8cac;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
